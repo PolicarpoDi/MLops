@@ -29,6 +29,7 @@ def sentimento(frase):
 
 
 @app.route('/cotacao/', methods=['POST'])
+@basic_auth.required
 def cotacao():
     # variavel que recebe os dados enviados pelo payload #
     dados = request.get_json()
